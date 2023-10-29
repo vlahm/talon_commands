@@ -21,9 +21,9 @@
 #    key(enter)
 
 #you can map keyboard shortcuts, not just voice commands
-#key(ctrl-t:passive):
-#	speech.toggle()
-#	app.notify("toggle talon")
+key(ctrl-t:passive):
+	speech.toggle()
+	app.notify("toggle talon")
 
 # misc
 
@@ -42,6 +42,11 @@ paste:
 highlight all:
 	key(ctrl-a)
 
+search:
+    key(ctrl-f)
+
+search:
+    key(ctrl-f) insert("{text}")
 
 
 # windows
@@ -49,11 +54,15 @@ highlight all:
 close window:
 	key(alt-f4)
 
-switch window:
-	key(alt-tab)
+switch (window|windows):
+	key(alt:down)
+	key(tab)
+	sleep(500ms)
+	key(tab)
+	key(alt:up)
 
 switch same:
-	key(alt-tilde)
+	key(alt-~)
 
 # workspace
 
@@ -69,12 +78,12 @@ move to next workspace:
 move to previous workspace:
 	key(ctrl-alt-shift-up)
 
-workspace:
-	key(alt-f2)
-	sleep(300ms)
-	insert("wmctrl -s ")
-	{number}
-	key(enter)
+#workspace:
+#	key(alt-f2)
+#	sleep(300ms)
+#	insert("wmctrl -s ")
+#	{number}
+#	key(enter)
 
 
 

@@ -67,7 +67,7 @@ recover tab:
 next tab:
 	key(ctrl-tab)
 
-previous tab
+previous tab:
 	key(ctrl-shift-tab)
 
 #prevent mishears
