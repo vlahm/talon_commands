@@ -21,7 +21,7 @@
 #    key(enter)
 
 #you can map keyboard shortcuts, not just voice commands
-key(ctrl-t:passive):
+key(ctrl-shift-t:passive):
 	speech.toggle()
 	app.notify("toggle talon")
 
@@ -63,6 +63,15 @@ switch (window|windows):
 
 switch same:
 	key(alt-~)
+
+move window left:
+	key(super-shift-left)
+
+move window right:
+	key(super-shift-right)
+
+maximize:
+	key(super-up)
 
 # workspace
 

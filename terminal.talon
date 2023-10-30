@@ -18,4 +18,34 @@ app.name: Gnome-terminal
 #    insert("google.com")
 #    key(enter)
 
+# terminal shortcuts
+clear left:
+	key(ctrl-u)
+	
+clear right:
+	key(ctrl-k)
+
+clear:
+	key(ctrl-k)
+	key(ctrl-u)
+
+clear output:
+	key(ctrl-l)
+
+interrupt:
+	key(ctrl-c)
+
+kill:
+	key(ctrl-d)
+
+mega kill:
+	key(ctrl-x)
+
+
+# opening programs
+vim:
+	insert('vim')
+	key(enter)
+	sleep(200ms)
+	key(i)
 
