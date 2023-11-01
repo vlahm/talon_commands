@@ -51,7 +51,7 @@ search:
 
 # windows
 
-close window:
+close [window]:
 	key(alt-f4)
 
 switch (window|windows):
