@@ -70,7 +70,10 @@ next tab:
 previous tab:
 	key(ctrl-shift-tab)
 
+
 #prevent mishears
 
 close air:
 	key()
+
+

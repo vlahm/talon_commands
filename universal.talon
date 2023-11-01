@@ -73,6 +73,9 @@ move window right:
 maximize:
 	key(super-up)
 
+toggle windows:
+	key(super)
+
 # workspace
 
 next workspace:

@@ -42,10 +42,24 @@ mega kill:
 	key(ctrl-x)
 
 
+# common files
+bash RC:
+	insert('bashrc')
+	key(enter)
+
+bash RC two:
+	insert('bashrc2')
+	key(enter)
+
+plants:
+	insert('plants')
+	key(enter)
+
 # opening programs
 vim:
 	insert('vim')
 	key(enter)
 	sleep(200ms)
 	key(i)
+
 

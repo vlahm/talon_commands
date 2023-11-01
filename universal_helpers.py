@@ -1,7 +1,7 @@
-from typing import Dict
-from talon import Module, actions
+#from typing import Dict
+#from talon import Module, actions
 
-mod = Module()
+#mod = Module()
 
 
-@mod.capture(rule="((north | south) [(east | west)] | east | west)")
+#@mod.capture(rule="((north | south) [(east | west)] | east | west)")

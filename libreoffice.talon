@@ -22,9 +22,6 @@ add [entry]:
     key(f2)
     "+"
 
-next:
-	key(tab)
-
 document home:
 	key(ctrl-home)
 
