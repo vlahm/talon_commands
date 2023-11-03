@@ -56,6 +56,13 @@ plants:
 	key(enter)
 
 # opening programs
+vim <user.text>:
+	insert('vim ')
+	insert(text)
+	key(enter)
+	sleep(200ms)
+	key(i)
+
 vim:
 	insert('vim')
 	key(enter)
@@ -63,3 +70,29 @@ vim:
 	key(i)
 
 
+#navigation
+
+el less:
+	insert('ls')
+	key(enter)
+LA:
+	insert('la')
+	key(enter)
+
+CD home:
+	insert('cd ~')
+	key(enter)
+CD up:
+	insert('cd ..')
+	key(enter)
+CD back:
+	insert('cd -')
+	key(enter)
+CD root:
+	insert('cd /')
+	key(enter)
+
+print working directory:
+	insert('pwd')
+	key(enter)
+	
