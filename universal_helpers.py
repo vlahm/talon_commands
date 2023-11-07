@@ -3,5 +3,5 @@
 
 #mod = Module()
 
-
 #@mod.capture(rule="((north | south) [(east | west)] | east | west)")
+#@mod.capture(

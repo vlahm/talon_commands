@@ -1,4 +1,4 @@
-title: libreoffice-calc
+app: libreoffice-calc
 -
 slap: key(enter)
 [go] down: key(down)
@@ -42,3 +42,8 @@ jump right:
 	key(ctrl-right)
 jump left:
 	key(ctrl-left)
+
+undo:
+	key(ctrl-z)
+redo:
+	key(ctrl-shift-z)

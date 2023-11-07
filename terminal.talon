@@ -92,7 +92,23 @@ CD root:
 	insert('cd /')
 	key(enter)
 
+CD <user.text>:
+	insert('cd .')
+	insert(user.formatted_text(text, "SLASH_SEPARATED"))
+
 print working directory:
 	insert('pwd')
 	key(enter)
 	
+
+#git
+get status:
+	insert('git status')
+	key(enter)
+get add:
+	insert('git add .')
+	key(enter)
+get commit:
+	insert("git commit -m '")
+get push origin <user.text>:
+	insert('git push origin {text}'
