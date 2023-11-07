@@ -33,3 +33,12 @@ line beginning:
 
 line end:
 	key(end)
+
+jump up:
+	key(ctrl-up)
+jump down:
+	key(ctrl-down)
+jump right:
+	key(ctrl-right)
+jump left:
+	key(ctrl-left)

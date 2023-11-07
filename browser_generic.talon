@@ -70,6 +70,14 @@ next tab:
 previous tab:
 	key(ctrl-shift-tab)
 
+jay down:
+	key(j)
+	sleep(50ms)
+	key(j)
+	sleep(50ms)
+	key(j)
+	sleep(50ms)
+	key(j)
 
 #prevent mishears
 
