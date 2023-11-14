@@ -105,8 +105,11 @@ print working directory:
 #get status:
 #	insert('git status')
 #	key(enter)
-get add:
+get|git add:
 	insert('git add .')
 	key(enter)
-get push origin <user.text>:
-	insert('git push origin {text}'
+#requires removing some dumb lines from the end of community/apps/git/git_arguments.csv
+get|git push origin <user.word>:
+	insert('git push origin {word}')
+get|git pull upstream <user.word>:
+	insert('git pull upstream {word}')

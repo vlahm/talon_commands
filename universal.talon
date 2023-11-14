@@ -21,7 +21,7 @@
 #    key(enter)
 
 #you can map keyboard shortcuts, not just voice commands
-key(ctrl-super-,:passive):
+key(ctrl-super-,):
 	speech.toggle()
 	app.notify("toggle talon")
 
@@ -48,6 +48,8 @@ search:
 search:
     key(ctrl-f) insert("{text}")
 
+backspace:
+	key(backspace)
 
 # windows
 
@@ -97,5 +99,4 @@ move to previous workspace:
 #	{number}
 #	key(enter)
 
-backspace:
-	key(backspace)
+
