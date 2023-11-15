@@ -25,6 +25,14 @@ key(ctrl-super-,):
 	speech.toggle()
 	app.notify("toggle talon")
 
+key(ctrl-super-.):
+	tracking.control_toggle()
+	app.notify("toggle tracking")
+
+toggle eye tracking:
+	tracking.control_toggle()
+	app.notify("toggle tracking")
+
 # misc
 
 terminal:

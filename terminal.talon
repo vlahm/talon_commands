@@ -72,7 +72,7 @@ vim:
 
 #navigation
 
-el less:
+"el less"|eless|LS:
 	insert('ls')
 	key(enter)
 LA:
