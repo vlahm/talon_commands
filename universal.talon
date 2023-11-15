@@ -107,4 +107,12 @@ move to previous workspace:
 #	{number}
 #	key(enter)
 
+# movement
+
+roll down:
+	user.mouse_scroll_down(0.7)
+roll up:
+	user.mouse_scroll_up(0.7)
+bail out:
+	tracking.zoom_cancel()
 
