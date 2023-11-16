@@ -50,11 +50,11 @@ paste:
 highlight all:
 	key(ctrl-a)
 
-search:
+search [<user.text>]:
     key(ctrl-f)
-
-search:
-    key(ctrl-f) insert("{text}")
+	sleep(200ms)
+	insert(text or "")
+#    key(ctrl-f) insert("{text}")
 
 backspace:
 	key(backspace)
