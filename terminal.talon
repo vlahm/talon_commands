@@ -55,6 +55,14 @@ plants:
 	insert('plants')
 	key(enter)
 
+red one:
+	insert('red1')
+	key(enter)
+
+red two:
+	insert('red2')
+	key(enter)
+
 # opening programs
 vim <user.text>:
 	insert('vim ')
