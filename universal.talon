@@ -59,6 +59,11 @@ search [<user.text>]:
 backspace:
 	key(backspace)
 
+suspend:
+	key(super)
+	sleep(250ms)
+	insert("suspend")
+
 # windows
 
 close [window]:
