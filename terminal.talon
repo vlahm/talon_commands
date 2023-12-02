@@ -42,7 +42,7 @@ mega kill:
 	key(ctrl-x)
 
 
-# common files
+# common files and aliases
 bash RC:
 	insert('bashrc')
 	key(enter)
@@ -61,6 +61,10 @@ red one:
 
 red two:
 	insert('red2')
+	key(enter)
+
+talon hacks:
+	insert('talonhax')
 	key(enter)
 
 # opening programs
