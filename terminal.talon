@@ -67,15 +67,18 @@ talon hacks:
 	insert('talonhax')
 	key(enter)
 
+hefty grip:
+	insert('ftgrep .')
+7
 # opening programs
 vim <user.text>:
 	insert('vim ')
 	insert(text)
-	key(enter)
-	sleep(200ms)
-	key(i)
+	#key(enter)
+	#sleep(200ms)
+	#key(i)
 
-vim:
+blank vim:
 	insert('vim')
 	key(enter)
 	sleep(200ms)

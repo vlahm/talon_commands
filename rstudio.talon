@@ -7,6 +7,14 @@ call <user.text>:
 	insert(text)
 	insert('()')
 	key(left)
+assign: insert(' <- ')
+equal: insert(' = ')
+equals: insert(' == ')
+greater than: insert(' > ')
+less than: insert(' < ')
+greater equal: insert(' >= ')
+less equal: insert(' <= ')
+not equal|equals: insert(' != ')
 
 
 

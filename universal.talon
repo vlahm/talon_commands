@@ -8,10 +8,10 @@
 #settings():
 #    key_wait = 4.0
 
-# activate the global tag "browser"
+#  activate the global tag "browser"
 #tag(): browser
 
-# define some voice commands
+#  define some voice commands
 #hello chrome: "hello world"
 #switch tab: key(ctrl-tab)
 #go to google:
@@ -66,7 +66,7 @@ suspend:
 
 # windows
 
-close [window]:
+close window:
 	key(alt-f4)
 
 switch (window|windows):
