@@ -20,7 +20,7 @@
 #    insert("google.com")
 #    key(enter)
 
-#you can map keyboard shortcuts, not just voice commands
+# you can map keyboard shortcuts, not just voice commands
 key(ctrl-super-,):
 	speech.toggle()
 	app.notify("toggle talon")
@@ -34,35 +34,57 @@ toggle eye tracking:
 	app.notify("toggle tracking")
 
 # misc
-
 terminal:
 	key(ctrl-alt-t)
-
 dull eat:
 	key(del)
-
 copy:
 	key(ctrl-c)
-
 paste:
 	key(ctrl-v)
-
 highlight all:
 	key(ctrl-a)
-
 search [<user.text>]:
     key(ctrl-f)
 	sleep(200ms)
 	insert(text or "")
 #    key(ctrl-f) insert("{text}")
-
 backspace:
 	key(backspace)
-
 suspend:
 	key(super)
 	sleep(250ms)
 	insert("suspend")
+captain downer:
+	key(shift:down)
+captain upper:
+	key(shift:up)
+# windows
+
+close window:
+	key(alt-f4)
+
+switch (window|windows):
+	key(alt:down)
+	key(tab)
+	sleep(500ms)
+	key(tab)
+	key(alt:up)
+
+switch same:
+	key(alt-~)
+
+move window left:
+	key(super-shift-left)
+
+move window right:
+	key(super-shift-right)
+
+maximize:
+	key(super-up)
+
+toggle windows:
+	key(super)
 
 # windows
 

@@ -1,33 +1,39 @@
+title: /vim/i
+-
 #doesn't activate command mode
 #close this file: user.vim_command_mode(":q\n") 
+
+# vim commands
 close this file:
 	key(escape)
 	insert(':q!')
 	key(enter)
-
 write this file:
 	key(escape)
 	insert(':w')
 	key(enter)
-
 write and close|quit:
 	key(escape)
 	insert(':wq')
 	key(enter)
-
-fold open:
+fold|folder open:
 	key(escape)
 	insert('zo')
-
-fold close:
+fold|folder close:
 	key(escape)
 	insert('zc')
-
-fold open all:
+fold|folder open all:
 	key(escape)
 	insert('zR')
-
-fold close all:
+fold|folder close all:
 	key(escape)
 	insert('zM')
-
+# text inserts
+talon ki|key:
+	key(tab)
+	insert('key()')
+	key(left)
+talon insert:
+	key(tab)
+	insert("insert('')")
+	key(left:2)

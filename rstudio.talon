@@ -1,7 +1,7 @@
 app:Rstudio
 -
 
-#custom
+# custom
 
 call <user.text>:
 	insert(text)
@@ -18,7 +18,7 @@ not equal|equals: insert(' != ')
 
 
 
-#borrowed from some macos cheatsheet
+# borrowed from some macos cheatsheet
 
 run that : key("ctrl-enter")
 #run document : key("ctrl-alt-r")
