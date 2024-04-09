@@ -86,33 +86,6 @@ maximize:
 toggle windows:
 	key(super)
 
-# windows
-
-close window:
-	key(alt-f4)
-
-switch (window|windows):
-	key(alt:down)
-	key(tab)
-	sleep(500ms)
-	key(tab)
-	key(alt:up)
-
-switch same:
-	key(alt-~)
-
-move window left:
-	key(super-shift-left)
-
-move window right:
-	key(super-shift-right)
-
-maximize:
-	key(super-up)
-
-toggle windows:
-	key(super)
-
 # workspace
 
 next workspace:

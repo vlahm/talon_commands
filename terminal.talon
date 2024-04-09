@@ -22,12 +22,6 @@ and not title: /vim/i
 #    key(enter)
 
 # terminal syntax helpers
-string:
-	insert("''")
-	key(left)
-dub string:
-	insert('""')
-	key(left)
 
 # terminal shortcuts
 clear left: key(ctrl-u)
@@ -68,6 +62,9 @@ edit talon keys:
 edit talon formatters:
 	insert('vim /home/mike/.talon/user/community/core/text/formatters.py')
 	key(enter)
+# miscellaneous
+reenter:
+	key(up enter)
 # opening programs
 vim <user.text>:
 	insert('vim ')
