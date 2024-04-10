@@ -30,10 +30,10 @@ fold|folder close all:
 	insert('zM')
 # text inserts
 talon ki|key:
-	key(tab)
+	key(end space)
 	insert('key()')
 	key(left)
 talon insert:
-	key(tab)
+	key(end space)
 	insert("insert('')")
 	key(left:2)
