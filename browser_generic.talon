@@ -1,11 +1,13 @@
 app.name: firefox
 -
 
-(address|url [bar]):
+address|(url [bar]):
 	browser.focus_address()
 
-(address copy | url copy | copy address | copy url):
-	browser.focus_address() sleep(50ms) edit.copy()
+(address copy)|(url copy)|(copy address)|(copy url):
+	browser.focus_address()
+	sleep(50ms)
+	edit.copy()
 
 go home:
 	browser.go_home()
@@ -13,7 +15,7 @@ go home:
 [go] forward:
 	browser.go_forward()
 
-go (back | backward):
+go (back|backward):
 	browser.go_back()
 
 go to {user.website}:
@@ -37,7 +39,7 @@ bookmark tabs:
 refresh|reload:
 	browser.reload()
 
-(refresh | reload) it hard:
+(refresh|reload) hard:
 	browser.reload_hard()
 
 show downloads:
@@ -79,9 +81,9 @@ jay down:
 	sleep(50ms)
 	key(j)
 
-#prevent mishears
+# prevent mishears
 
 close air:
-	key()
+	key(shift)
 
 

@@ -13,3 +13,4 @@ fix string command
 make voice commands for every existing talent file
 even aliases itself (aliases.sh, source it in bashrc, hax.talon to call them all)
 Nick talons display words small and in the bottom right command mode write this file mux move left
+Figure out why saying the word full causes  te mux to detach from the session write this file commandment

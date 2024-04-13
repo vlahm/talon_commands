@@ -18,7 +18,7 @@ item one:
 	key(1)
 
 chili dog one:
-	key(1):
+	key(1)
 	sleep(1100ms)
 	key(1)
 
@@ -26,7 +26,7 @@ item two:
 	key(2)
 
 chili dog two:
-	key(2):
+	key(2)
 	sleep(1100ms)
 	key(2)
 
