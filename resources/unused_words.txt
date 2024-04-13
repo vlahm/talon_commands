@@ -1,0 +1,18 @@
+    Blink - for toggling or switching views.
+    Clap - for executing a "run" command.
+    Dash - to move quickly (e.g., to the end of a line).
+    Flick - to switch tabs or windows.
+    Glint - for highlighting text.
+    Hush - for stopping or pausing a process.
+    Jolt - for inserting or generating a template or snippet.
+    Knack - for opening settings or preferences.
+    Quirk - for initiating a debugging process.
+    Scrub - for deleting or removing elements.
+    Thunk - for saving progress or files.
+    Vex - to undo an action.
+    Whiff - for a quick preview or glance.
+    Pluck - to select a specific item or line.
+    Grim - for closing tabs or applications.
+    Shrug - for skipping or moving past something.
+    Twist - to rotate or change orientation.
+    Snip - for cutting text or sections.

@@ -1,64 +1,59 @@
-# activate this .talon file if the current app name is "Chrome"
-# you can find app names by running ui.apps() in the REPL
-#app.name: Chrome
-#the following "-" separates context criteria from declarations/tag-activations
 -
-# key_wait increases the delay when pressing keys (milliseconds)
-# this is useful if an app seems to jumble or drop keys
-#settings():
-#    key_wait = 4.0
+# text insertions
 
-#  activate the global tag "browser"
-#tag(): browser
+bubble:
+	insert('()')
+	key(left)
+box:
+	insert('[]')
+	key(left)
+mandoline|mandolin:
+	insert('{}')
+	key(left)
+diamond:
+	insert('<>')
+	key(left)
+substring|substrate:
+	insert("''")
+	key(left)
+superstring:
+	insert('""')
+	key(left)
 
-#  define some voice commands
-#hello chrome: "hello world"
-#switch tab: key(ctrl-tab)
-#go to google:
-#    # note: use key(cmd-t) on Mac
-#    key(ctrl-t)
-#    insert("google.com")
-#    key(enter)
+# copy paste highlight move text
 
-# you can map keyboard shortcuts, not just voice commands
-key(ctrl-super-,):
-	speech.toggle()
-	app.notify("toggle talon")
-
-key(ctrl-super-.):
-	tracking.control_toggle()
-	app.notify("toggle tracking")
-
-toggle eye tracking:
-	tracking.control_toggle()
-	app.notify("toggle tracking")
-
-# misc
-terminal:
-	key(ctrl-alt-t)
-dull eat:
-	key(del)
 copy:
 	key(ctrl-c)
 paste:
 	key(ctrl-v)
 highlight all:
 	key(ctrl-a)
-search [<user.text>]:
-    key(ctrl-f)
-	sleep(200ms)
-	insert(text or "")
-#    key(ctrl-f) insert("{text}")
+
+# keys
+
+zinc:
+	key(escape)
+dull eat:
+	key(del)
 backspace:
 	key(backspace)
-suspend:
-	key(super)
-	sleep(250ms)
-	insert("suspend")
-captain downer:
+lockdown:
 	key(shift:down)
-captain upper:
+lockup:
 	key(shift:up)
+
+# custom keyboard shortcuts
+
+key(ctrl-super-,):
+	speech.toggle()
+	app.notify("toggle talon")
+key(ctrl-super-.):
+	tracking.control_toggle()
+	app.notify("toggle tracking")
+toggle eye tracking:
+	tracking.control_toggle()
+	app.notify("toggle tracking")
+
 # windows
 
 close window:
@@ -86,20 +81,16 @@ maximize:
 toggle windows:
 	key(super)
 
-# workspace
+# workspaces
 
 next workspace:
 	key(ctrl-alt-down)
-
 previous workspace:
 	key(ctrl-alt-up)
-
 move to next workspace:
 	key(ctrl-alt-shift-down)
-
 move to previous workspace:
 	key(ctrl-alt-shift-up)
-
 #workspace:
 #	key(alt-f2)
 #	sleep(300ms)
@@ -109,15 +100,37 @@ move to previous workspace:
 
 # movement 
 
+links|lynx:
+	key(left)
+rex|wrecked:
+	key(right)
+down:
+	key(down)
+up:
+	key(up)
 roll down:
 	user.mouse_scroll_down(0.7)
 roll up:
 	user.mouse_scroll_up(0.7)
-bail out:
-	tracking.zoom_cancel()
 
 # programs
 
 are studio:
 	key(super-shift-6)
+terminal:
+	key(ctrl-alt-t)
 
+# misc
+
+bail out:
+	tracking.zoom_cancel()
+remove grid:
+	user.grid_close()
+search [<user.text>]:
+    key(ctrl-f)
+	sleep(200ms)
+	insert(text or "")
+suspend:
+	key(super)
+	sleep(250ms)
+	insert("suspend")

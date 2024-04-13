@@ -3,10 +3,10 @@ title: /^tmux/
 -
 mux split horizontal:
     key(ctrl-b)
-    key(%)
+    key(")
 mux split vertical:
     key(ctrl-b)
-    key(")
+    key(%)
 mux next pane:
     key(ctrl-b)
     key(o)

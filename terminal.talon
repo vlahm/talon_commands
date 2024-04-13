@@ -2,7 +2,7 @@
 app.name: Gnome-terminal
 and not title: /vim/i
 -
-# notes
+# NOTES (move this to talon hacks eventually)
 #key_wait increases the delay when pressing keys (milliseconds)
 
 #this is useful if an app seems to jumble or drop keys
@@ -12,18 +12,7 @@ and not title: /vim/i
 #activate the global tag "browser"
 #tag(): browser
 
-# examples
-#hello chrome: "hello world"
-#switch tab: key(ctrl-tab)
-#go to google:
-#    # note: use key(cmd-t) on Mac
-#    key(ctrl-t)
-#    insert("google.com")
-#    key(enter)
-
-# terminal syntax helpers
-
-# terminal shortcuts
+# shortcuts
 clear left: key(ctrl-u)
 clear right: key(ctrl-k)
 clear:
@@ -34,7 +23,27 @@ interrupt: key(ctrl-c)
 kill: key(ctrl-d)
 mega kill: key(ctrl-x)
 
-# common files and aliases
+# grep sed awk tr
+hefty grip:
+	insert('ftgrep .')
+tell|tall|towel grip [<user.text>]:
+	insert("ftgrep .talon ''")
+	key(left)
+	insert(text or '')
+tell|tall|towel grip files [<user.text>]:
+	insert("grep -rl --include='*.talon' ''")
+	key(left)
+	insert(text or '')
+pie grip [<user.text>]:
+	insert("ftgrep .py ''")
+	key(left)
+	insert(text or '')
+pie grip files [<user.text>]:
+	insert("grep -rl --include='*.py' ''")
+	key(left)
+	insert(text or '')
+
+# files+
 bash RC:
 	insert('bashrc')
 	key(enter)
@@ -44,34 +53,14 @@ bash RC two:
 plants:
 	insert('plants')
 	key(enter)
-red one:
-	insert('red1')
-	key(enter)
-red two:
-	insert('red2')
-	key(enter)
 talon hacks:
 	insert('talonhax')
 	key(enter)
-hefty grip:
-	insert('ftgrep .')
-# talon-specific locations
-edit talon keys:
-	insert('vim /home/mike/.talon/user/community/core/keys/keys.py')
-	key(enter)
-edit talon formatters:
-	insert('vim /home/mike/.talon/user/community/core/text/formatters.py')
-	key(enter)
-# miscellaneous
-reenter:
-	key(up enter)
-# opening programs
+
+# programs
 vim <user.text>:
 	insert('vim ')
 	insert(text)
-	#key(enter)
-	#sleep(200ms)
-	#key(i)
 blank vim:
 	insert('vim')
 	key(enter)
@@ -79,6 +68,7 @@ blank vim:
 	key(i)
 vim|them prepare:
 	insert('vim ')
+
 # navigation
 "el less"|eless|LS:
 	insert('ls')
@@ -101,14 +91,21 @@ CD root:
 CD <user.text>:
 	insert('cd .')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))
-
 print working directory:
 	insert('pwd')
 	key(enter)
+
+# misc shell commands
+red one:
+	insert('red1')
+	key(enter)
+red two:
+	insert('red2')
+	key(enter)
+reenter:
+	key(up enter)
+
 # git extras
-#get status:
-#	insert('git status')
-#	key(enter)
 get|git add:
 	insert('git add .')
 	key(enter)
