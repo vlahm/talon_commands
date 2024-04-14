@@ -58,16 +58,14 @@ talon hacks:
 	key(enter)
 
 # programs
-vim <user.text>:
+text edit [<user.text>]:
 	insert('vim ')
-	insert(text)
-blank vim:
+	insert(text or '')
+blank text edit:
 	insert('vim')
 	key(enter)
 	sleep(200ms)
 	key(i)
-vim|them prepare:
-	insert('vim ')
 
 # navigation
 "el less"|eless|LS:
@@ -105,12 +103,3 @@ red two:
 reenter:
 	key(up enter)
 
-# git extras
-get|git add:
-	insert('git add .')
-	key(enter)
-#requires removing some dumb lines from the end of community/apps/git/git_arguments.csv
-get|git push origin <user.word>:
-	insert('git push origin {word}')
-get|git pull upstream <user.word>:
-	insert('git pull upstream {word}')

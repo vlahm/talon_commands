@@ -3,7 +3,8 @@ title: /vim/i
 #doesn't activate command mode
 #close this file: user.vim_command_mode(":q\n") 
 
-# vim commands
+# file operations
+
 close this file:
 	key(escape)
 	insert(':q!')
@@ -16,6 +17,9 @@ write and close|quit:
 	key(escape)
 	insert(':wq')
 	key(enter)
+
+# folding
+
 fold|folder open:
 	key(escape)
 	insert('zo')
@@ -28,7 +32,9 @@ fold|folder open all:
 fold|folder close all:
 	key(escape)
 	insert('zM')
+
 # text inserts
+
 talon ki|key:
 	key(end enter tab)
 	insert('key()')
@@ -37,3 +43,36 @@ talon insert:
 	key(end enter tab)
 	insert("insert('')")
 	key(left:2)
+
+# selection
+
+glint line:
+	key(escape shift-v)
+glint block:
+	key(escape control-v)
+clip line:
+	key(escape y y)
+snip line:
+	key(escape d d)
+
+# registers
+
+system clip:
+	key(shift-' shift-= y)
+system snip:
+	key(shift-' shift-= d)
+system put:
+	key(escape shift-' shift-= p)
+#clip register :
+
+# movement
+
+go:
+	key(escape shift-g)
+retro:
+	key(``)
+
+# miscellaneous
+
+jolt:
+	key(c a w)

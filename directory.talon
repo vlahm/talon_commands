@@ -59,17 +59,17 @@ universal hacks:
 	key(enter)
 universal hacks edit:
 	insert('vuniversal')
-	key(edit)
+	key(enter)
 universal helpers:
 	insert('tuniversalp')
-	key(edit)
+	key(enter)
 universal helpers edit:
 	insert('vuniversalp')
-	key(edit)
-vim|them hacks tell|tall|towel:
+	key(enter)
+text hacks:
 	insert('tvim')
 	key(enter)
-vim|them hacks tell|tall|towel edit:
+text hacks edit:
 	insert('vvim')
 	key(enter)
 formatters file:
@@ -84,4 +84,9 @@ keys file:
 keys file edit:
 	insert('vkeys')
 	key(enter)
-
+get|git hacks:
+	insert('tgit')
+	key(enter)
+get|git hacks edit:
+	insert('vgit')
+	key(enter)

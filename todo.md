@@ -3,13 +3,11 @@ chime 5m
 snap window right/left
 say the word "cap"
 refresh my memory about directory movement
-enable yank to system clipboard in vim
 get slog
 relearn how to delete word left and stuff
 copy our studio commands over to the cheat sheet
 make the old dragonfly cheat sheet fullyrelevant again
 
-fix string command
 make talon display words small and in the bottom right
 Figure out why saying the word full causes  te mux to detach from the session write this file commandment
 "talon" should be tall|tell|towel everywhere

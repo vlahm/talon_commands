@@ -2,7 +2,7 @@
     Clap - for executing a "run" command.
     Dash - to move quickly (e.g., to the end of a line).
     Flick - to switch tabs or windows.
-    Glint - for highlighting text.
+    #Glint - for highlighting text.
     Hush - for stopping or pausing a process.
     Jolt - for inserting or generating a template or snippet.
     Knack - for opening settings or preferences.
