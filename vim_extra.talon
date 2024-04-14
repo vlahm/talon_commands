@@ -5,41 +5,50 @@ title: /vim/i
 
 # file operations
 
-close this file:
+close and discard:
 	key(escape)
 	insert(':q!')
+	key(enter)
+close this file:
+	key(escape)
+	insert(':q')
 	key(enter)
 write this file:
 	key(escape)
 	insert(':w')
 	key(enter)
-write and close|quit:
+write and (close|quit):
 	key(escape)
 	insert(':wq')
 	key(enter)
 
 # folding
 
-fold|folder open:
+crimp:
 	key(escape)
 	insert('zo')
-fold|folder close:
+crimp close:
 	key(escape)
 	insert('zc')
-fold|folder open all:
+crimp open all:
 	key(escape)
 	insert('zR')
-fold|folder close all:
+crimp close all:
 	key(escape)
 	insert('zM')
 
 # text inserts
 
-talon ki|key:
+
+talon (ki|key):
 	key(end enter tab)
 	insert('key()')
 	key(left)
-talon insert:
+(tall|tell|towel) (ki|key):
+	key(end enter tab)
+	insert('key()')
+	key(left)
+(tall|tell|towel) insert:
 	key(end enter tab)
 	insert("insert('')")
 	key(left:2)

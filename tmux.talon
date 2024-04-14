@@ -32,6 +32,6 @@ mux save session:
 mux reload session:
 	key(ctrl-b)
 	key(ctrl-r)
-mux toggle fur|full|fool:
+mux toggle (fur|full|fool):
 	key(ctrl-b)
 	key(ctrl-z)

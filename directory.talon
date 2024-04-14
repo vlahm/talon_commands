@@ -5,13 +5,13 @@ and not title: /vim/i
 directory aliases:
 	insert('valias_bash')
 	key(enter)
-directory se|see:
+directory (se|see):
 	insert('tdirectory')
 	key(enter)
 directory edit:
 	insert('vdirectory')
 	key(enter)
-todos|(todo see|se):
+(todos|todo) (see|se):
 	insert('ttodo')
 	key(enter)
 todo edit:
@@ -30,10 +30,10 @@ browser hacks:
 browser hacks edit:
 	insert('vbrowser')
 	key(enter)
-list tax|hacks:
+list (tax|hacks):
 	insert('tlists')
 	key(enter)
-list tax|hacks edit:
+list (tax|hacks) edit:
 	insert('vlists')
 	key(enter)
 office hacks:
@@ -42,16 +42,16 @@ office hacks:
 office hacks edit:
 	insert('voffice')
 	key(enter)
-are|or studio hacks:
+(are|or) studio hacks:
 	insert('tstudio')
 	key(enter)
-are|or studio hacks edit:
+(are|or) studio hacks edit:
 	insert('vstudio')
 	key(enter)
-teabox|(te mux) hacks:
+(teabox|"te mux") hacks:
 	insert('ttmux')
 	key(enter)
-teabox|(te mux) hacks edit:
+(teabox|"te mux") hacks edit:
 	insert('vtmux')
 	key(enter)
 universal hacks:
@@ -84,9 +84,9 @@ keys file:
 keys file edit:
 	insert('vkeys')
 	key(enter)
-get|git hacks:
+(get|git) hacks:
 	insert('tgit')
 	key(enter)
-get|git hacks edit:
+(get|git) hacks edit:
 	insert('vgit')
 	key(enter)

@@ -26,11 +26,11 @@ mega kill: key(ctrl-x)
 # grep sed awk tr
 hefty grip:
 	insert('ftgrep .')
-tell|tall|towel grip [<user.text>]:
+((tell|tall|towel)|talon) grip [<user.text>]:
 	insert("ftgrep .talon ''")
 	key(left)
 	insert(text or '')
-tell|tall|towel grip files [<user.text>]:
+((tell|tall|towel)|talon) grip files [<user.text>]:
 	insert("grep -rl --include='*.talon' ''")
 	key(left)
 	insert(text or '')

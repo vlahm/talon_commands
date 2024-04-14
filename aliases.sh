@@ -1,3 +1,5 @@
+alias tgit='less /home/mike/.talon/user/git_extras.talon'
+alias vgit='vim /home/mike/.talon/user/git_extras.talon'
 alias talias_bash='less /home/mike/.talon/user/aliases.sh'
 alias valias_bash='vim /home/mike/.talon/user/aliases.sh'
 alias tdirectory='less /home/mike/.talon/user/directory.talon'
