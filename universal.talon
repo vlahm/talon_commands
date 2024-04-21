@@ -20,7 +20,14 @@ superstring:
 	insert('""')
 	key(left)
 
-# copy paste highlight move text
+# scroll
+
+roll down:
+	user.mouse_scroll_down(0.7)
+roll up:
+	user.mouse_scroll_up(0.7)
+
+# copy paste select jump
 
 copy:
 	key(ctrl-c)
@@ -49,6 +56,14 @@ lockdown:
 	key(shift:down)
 lockup:
 	key(shift:up)
+links|lynx:
+	key(left)
+rex|wrecked:
+	key(right)
+down:
+	key(down)
+up:
+	key(up)
 
 # custom keyboard shortcuts
 
@@ -103,21 +118,6 @@ move to previous workspace:
 #	insert("wmctrl -s ")
 #	{number}
 #	key(enter)
-
-# movement 
-
-links|lynx:
-	key(left)
-rex|wrecked:
-	key(right)
-down:
-	key(down)
-up:
-	key(up)
-roll down:
-	user.mouse_scroll_down(0.7)
-roll up:
-	user.mouse_scroll_up(0.7)
 
 # programs
 

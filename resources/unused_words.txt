@@ -17,4 +17,5 @@
     Twist - to rotate or change orientation.
     XSnip - for cutting text or sections
 	Xcrimp - fold
-	zinc - escape
+	Xzinc - escape
+	root - enter directory and print

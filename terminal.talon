@@ -68,12 +68,28 @@ blank text edit:
 	key(i)
 
 # navigation
-"el less"|eless|LS:
+flash:
 	insert('ls')
 	key(enter)
-LA:
+flash details:
+	insert('ll')
+	key(enter)
+flash recent:
+	insert('lh')
+	key(enter)
+flash curse:
+	insert('ls -R')
+	key(enter)
+flash curse details:
+	insert('ls -lR')
+	key(enter)
+flash all:
 	insert('la')
 	key(enter)
+#("el less"|eless|LS) <user.text>:
+(lass|laugh) [<user.text>]:
+	insert('ls ')
+	insert(user.formatted_text(text or '', "snake"))
 CD home:
 	insert('cd ~')
 	key(enter)
@@ -86,6 +102,9 @@ CD back:
 CD root:
 	insert('cd /')
 	key(enter)
+branch <user.text>:
+	insert('c .')
+	insert(user.formatted_text(text, "SLASH_SEPARATED"))
 CD <user.text>:
 	insert('cd .')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))

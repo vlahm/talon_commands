@@ -1,9 +1,6 @@
-"open below" needs to be changed because it opens webpages
 chime 5m
-snap window right/left
 What is the proper way to say "fine" in vim
-refresh my memory about directory movement
-relearn how to delete word left and stuff
+turn talon hacks into a legit talon file with sections
 copy our studio commands over to the cheat sheet
 make the old dragonfly cheat sheet fullyrelevant again
 
