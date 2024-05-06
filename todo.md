@@ -1,3 +1,11 @@
+tea[:]
+	lull, that's a great name for something, maybe without the colon though?b
+	make new session save
+	reattached to the last detached session
+	Do I have a command for just se wipe twice, while I'm thinking slap
+tab space wall
+.talonminimize window, but just minimize stop listener commandment9
+
 chime 5m
 What is the proper way to say "fine" in vim
 turn talon hacks into a legit talon file with sections

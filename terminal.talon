@@ -111,7 +111,19 @@ CD <user.text>:
 print working directory:
 	insert('pwd')
 	key(enter)
-
+# locations
+warp talon:
+	insert('c ~/.talon/user')
+	key(enter)
+warp downloads:
+	insert('c ~/Downloads')
+	key(enter)
+warp desktop:
+	insert('c ~/Desktop')
+	key(enter)
+warp dropbox:
+	insert('c ~/Dropbox')
+	key(enter)
 # misc shell commands
 red one:
 	insert('red1')
