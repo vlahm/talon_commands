@@ -1,3 +1,6 @@
+"wake up" should be commented. gets tripped accidentally
+	start listening and stop listening should either be disabled or remapped
+should have a command for last workspace
 tea[:]
 	lull, that's a great name for something, maybe without the colon though?b
 	make new session save

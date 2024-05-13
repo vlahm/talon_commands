@@ -39,11 +39,18 @@ crimp close all:
 
 # text inserts
 
-
-talon (ki|key):
-	key(end enter tab)
+#	talon (ki|key):
+#		key(end enter tab)
+#		insert('key()')
+#		key(left)
+compact (ki|key):
+	key(end space)
 	insert('key()')
 	key(left)
+compact insert:
+	key(end space)
+	insert("insert('')")
+	key(left:2)
 (tall|tell|towel) (ki|key):
 	key(end enter tab)
 	insert('key()')
@@ -84,4 +91,4 @@ retro:
 # miscellaneous
 
 jolt:
-	key(c a w)
+	key(escape c a w)

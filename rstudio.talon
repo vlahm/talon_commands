@@ -1,14 +1,11 @@
 app:Rstudio
 -
 
-# custom
+# operators
 
-call <user.text>:
-	insert(text)
-	insert('()')
-	key(left)
 assign: insert(' <- ')
 equal: insert(' = ')
+
 equals: insert(' == ')
 greater than: insert(' > ')
 less than: insert(' < ')
@@ -16,7 +13,48 @@ greater equal: insert(' >= ')
 less equal: insert(' <= ')
 not equal|equals: insert(' != ')
 
+plus: insert(' + ')
+minus: insert(' - ')
+times|multiply: insert(' * ')
+divide|divided: insert(' / ')
+modular|modulo: insert(' %% ')
 
+(is in)|within: insert(' %in% ')
+pipe:
+	key(end)
+	insert(' %>%')
+	key(enter)
+
+
+# convenience/structures
+
+install packages:
+	insert("install.packages('')")
+	key(left:2)
+library:
+	insert("library()")
+	key(left)
+call <user.text>:
+	insert(text)
+	insert('()')
+	key(left)
+for loop <user.letter> <user.text>:
+	insert('for( in ){')
+	key(left:6)
+	insert(letter)
+	key(right:4)
+	insert(text)
+	key(end enter enter backspace)
+	insert('}')
+	key(up end)
+function setup <user.text>:
+	insert(user.formatted_text(text, 'snake'))
+	insert(' <- function(){')
+	key(left:2)
+function define:
+	key(end enter enter backspace)
+	insert('}')
+	key(up end)
 
 # borrowed from some macos cheatsheet
 
