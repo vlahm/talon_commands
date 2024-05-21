@@ -66,7 +66,13 @@ blank text edit:
 	key(enter)
 	sleep(200ms)
 	key(i)
-
+(teabox|mux) (list|lass|flash|alas):
+	insert('tmux ls')
+	key(enter)
+(teabox|mux) new session [<user.letter>]:
+	insert('tmux new -s ')
+	insert(letter)
+	key(enter)
 # navigation
 flash:
 	insert('ls')
