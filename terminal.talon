@@ -73,6 +73,10 @@ blank text edit:
 	insert('tmux new -s ')
 	insert(letter)
 	key(enter)
+(teabox|mux) reattach session [<user.letter>]:
+	insert('tmux attach -t ')
+	insert(letter)
+	key(enter)
 # navigation
 flash:
 	insert('ls')
@@ -102,7 +106,7 @@ CD home:
 CD up:
 	insert('cd ..')
 	key(enter)
-CD back:
+CD (back|previous):
 	insert('cd -')
 	key(enter)
 CD root:
@@ -111,6 +115,8 @@ CD root:
 branch <user.text>:
 	insert('c .')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))
+branch:
+	insert('c ')
 CD <user.text>:
 	insert('cd .')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))

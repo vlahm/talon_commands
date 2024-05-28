@@ -87,7 +87,8 @@ go:
 	key(escape shift-g)
 retro:
 	key(``)
-
+fade:
+	key(shift-f)
 # miscellaneous
 
 jolt:

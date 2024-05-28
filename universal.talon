@@ -95,6 +95,8 @@ move window right:
 	key(super-shift-right)
 maximize:
 	key(super-up)
+minimize:
+	key(super-h)
 toggle windows:
 	key(super)
 squish window (right|rex):
