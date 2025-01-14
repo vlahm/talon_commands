@@ -22,10 +22,23 @@ superstring:
 
 # scroll
 
+#enable his|hiss scroll:
+#    user.mouse_enable_hiss_scroll = true
+#disable his|hiss scroll:
+#    user.mouse_enable_hiss_scroll = false
+
 roll down:
-	user.mouse_scroll_down(0.7)
+	user.mouse_scroll_down(0.1)
+	sleep(50ms)
+	user.mouse_scroll_down(0.1)
+	sleep(50ms)
+	user.mouse_scroll_down(0.1)
+	sleep(50ms)
+	user.mouse_scroll_down(0.1)
+	sleep(50ms)
+	user.mouse_scroll_down(0.1)
 roll up:
-	user.mouse_scroll_up(0.7)
+	user.mouse_scroll_up(0.6)
 
 # copy paste select jump
 
@@ -72,9 +85,7 @@ key(ctrl-super-,):
 	app.notify("toggle talon")
 key(ctrl-super-.):
 	tracking.control_toggle()
-	app.notify("toggle tracking")
-toggle eye tracking:
-	tracking.control_toggle()
+	tracking.zoom_cancel()
 	app.notify("toggle tracking")
 
 # windows
@@ -132,6 +143,10 @@ terminal:
 
 bail out:
 	tracking.zoom_cancel()
+toggle eye tracking:
+	tracking.control_toggle()
+	tracking.zoom_cancel()
+	app.notify("toggle tracking")
 remove grid:
 	user.grid_close()
 search [<user.text>]:

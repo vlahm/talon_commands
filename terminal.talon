@@ -43,6 +43,18 @@ pie grip files [<user.text>]:
 	key(left)
 	insert(text or '')
 
+# find
+find name [<user.text>]:
+	insert("find . -name '")
+	insert(text or '')
+	insert("'")
+	key(left)
+find (Durr|directory) [<user.text>]:
+	insert("find . -type d -name '")
+	insert(text or '")
+	insert("'")
+	key(left)
+
 # files+
 bash RC:
 	insert('bashrc')
@@ -145,4 +157,8 @@ red two:
 	key(enter)
 reenter:
 	key(up enter)
-
+pseudo|sudo:
+	insert('sudo ')
+(pseudo|sudo) sue|two:
+	insert('sudo su')
+	key(enter)

@@ -1,6 +1,5 @@
 app:Rstudio
 -
-
 # operators
 
 assign: insert(' <- ')
@@ -73,6 +72,7 @@ run all : key("ctrl-shift-s")
 #jump back : key("ctrl-f9")
 #jump forward : key("ctrl-f10")
 #close all tabs : key("ctrl-shift-w")
+close tab:  key("ctrl-w")
 indent lines : key("ctrl-i")
 toggle comment : key("ctrl-shift-c")
 reformat comment : key("ctrl-shift-/")
@@ -121,9 +121,12 @@ go to environment : key("ctrl-8")
 #go to omni : key("ctrl-.")
 #go to line : key("ctrl-shift-alt-g")
 #go to section : key("ctrl-shift-alt-j")
+new tab: key("ctrl-shift-n")
 go to tab : key("ctrl-shift-.")
-go to previous tab : key("ctrl-f11")
-go to next tab : key("ctrl-f12")
+previous tab:
+	key(ctrl-shift-tab)
+next tab:
+	key(ctrl-tab)
 go to first tab : key("ctrl-shift-f11")
 go to last tab : key("ctrl-shift-f12")
 zoom source : key("ctrl-shift-1")
