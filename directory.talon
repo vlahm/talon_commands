@@ -1,4 +1,5 @@
 app.name: Gnome-terminal
+app.name: /konsole/i
 and not title: /vim/i
 -
 

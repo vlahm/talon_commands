@@ -48,6 +48,8 @@ paste:
 	key(ctrl-v)
 highlight all:
 	key(ctrl-a)
+(select|highlight) word:
+	key(ctrl-left ctrl-shift-right)
 
 # keys
 
@@ -88,24 +90,41 @@ key(ctrl-super-.):
 	tracking.zoom_cancel()
 	app.notify("toggle tracking")
 
+# mouse
+
+center mouse:
+	key(super-f6)
+focus mouse:
+	key(super-f5)
 # windows
 
+show windows:
+	key(ctrl-f9)
+show all windows:
+	key(ctrl-f10)
+show same windows:
+	key(ctrl-f7)
 close window:
 	key(alt-f4)
 switch (window|windows):
-	key(alt:down)
-	key(tab)
-	sleep(500ms)
-	key(tab)
-	key(alt:up)
+#	key(alt:down)
+#	key(tab)
+#	sleep(500ms)
+#	key(tab)
+#	key(alt:up)
+	key(alt-tab)
+switch (window|windows) rev:
+	key(alt-shift-tab)
 switch same:
+	key(alt-`)
+switch same alt:
 	key(alt-~)
 move window left:
 	key(super-shift-left)
 move window right:
 	key(super-shift-right)
 maximize:
-	key(super-up)
+	key(super-shift-up)
 minimize:
 	key(super-h)
 toggle windows:
@@ -125,6 +144,12 @@ move to next workspace:
 	key(ctrl-alt-shift-down)
 move to previous workspace:
 	key(ctrl-alt-shift-up)
+move to workspace <number_small>:
+	key(ctrl:down alt:down shift:down)
+	insert(number_small)
+	key(ctrl:up alt:up shift:up)
+show all workspaces:
+	key(ctrl-f8)
 #workspace:
 #	key(alt-f2)
 #	sleep(300ms)
@@ -157,3 +182,8 @@ suspend:
 	key(super)
 	sleep(250ms)
 	insert("suspend")
+
+# system
+
+lock session:
+	key(super-l)

@@ -1,5 +1,6 @@
 # you can find app names by running ui.apps() in the REPL
-app.name: Gnome-terminal
+title: /Konsole/i
+title: /Gnome-terminal/i
 and not title: /vim/i
 -
 # NOTES (move this to talon hacks eventually)
@@ -85,7 +86,7 @@ blank text edit:
 	insert('tmux new -s ')
 	insert(letter)
 	key(enter)
-(teabox|mux) reattach session [<user.letter>]:
+(teabox|mux) attach session [<user.letter>]:
 	insert('tmux attach -t ')
 	insert(letter)
 	key(enter)
@@ -159,6 +160,6 @@ reenter:
 	key(up enter)
 pseudo|sudo:
 	insert('sudo ')
-(pseudo|sudo) sue|two:
+(pseudo|sudo) (sue|two):
 	insert('sudo su')
 	key(enter)

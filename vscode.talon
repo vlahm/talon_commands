@@ -1,4 +1,5 @@
-app:Rstudio
+app:code
+title: /\.R - /
 -
 # operators
 
