@@ -3,6 +3,11 @@ title: /vim/i
 #doesn't activate command mode
 #close this file: user.vim_command_mode(":q\n") 
 
+# insertions
+
+line above: key(escape shift-o)
+line below: key(escape o)
+
 # file operations
 
 close and discard:
@@ -85,6 +90,8 @@ system put:
 
 go:
 	key(escape shift-g)
+go top:
+	key(escape g g)
 retro:
 	key(``)
 fade:

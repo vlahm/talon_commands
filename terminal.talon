@@ -163,3 +163,6 @@ pseudo|sudo:
 (pseudo|sudo) (sue|two):
 	insert('sudo su')
 	key(enter)
+
+# turbo misc
+control: insert('ctrl-')

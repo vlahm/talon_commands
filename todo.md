@@ -9,3 +9,6 @@ make the old dragonfly cheat sheet fullyrelevant again
 
 make talon display words small and in the bottom right
 Figure out why saying the word full causes  te mux to detach from the session
+
+change all occurrences
+	ztrl+F6 (fucky)
