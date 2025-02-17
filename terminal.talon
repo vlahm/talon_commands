@@ -126,7 +126,7 @@ CD root:
 	insert('cd /')
 	key(enter)
 branch <user.text>:
-	insert('c .')
+	insert('c ./')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))
 branch:
 	insert('c ')
@@ -163,3 +163,6 @@ pseudo|sudo:
 (pseudo|sudo) (sue|two):
 	insert('sudo su')
 	key(enter)
+
+# turbo misc
+control: insert('ctrl-')

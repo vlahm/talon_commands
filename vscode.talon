@@ -1,124 +1,76 @@
 app:code
-title: /\.R - /
 -
-# operators
+# menus and info
+Renzo|runzo: key("ctrl-shift-p")
+[show] [file] explorer: key("ctrl-shift-e")
+[show] [our] workspace: key("ctrl-k ctrl-shift-r")
+show help: key("f1")
 
-assign: insert(' <- ')
-equal: insert(' = ')
+new tab: key("ctrl-shift-n")
+#go to tab : key("ctrl-shift-.")
+previous tab: key(ctrl-shift-tab)
+next tab: key(ctrl-tab)
+close tab:  key("ctrl-w")
+#go to first tab : key("ctrl-shift-f11")
+#go to last tab : key("ctrl-shift-f12")
 
-equals: insert(' == ')
-greater than: insert(' > ')
-less than: insert(' < ')
-greater equal: insert(' >= ')
-less equal: insert(' <= ')
-not equal|equals: insert(' != ')
+# introspection
+rename symbol: key("f2")
+[peek] definition: key("ctrl-shift-f10")
+go to definition: key("f12")
+references: key("ctrl-f12")
+find all references: key("alt-shift-f12")
+hierarchy: key("alt-shift-f12")
+show problems: key("ctrl-shift-alt-m")
 
-plus: insert(' + ')
-minus: insert(' - ')
-times|multiply: insert(' * ')
-divide|divided: insert(' / ')
-modular|modulo: insert(' %% ')
+# edit
+reformat: key("ctrl-shift-i")
+[insert] cursor above: key("ctrl-shift-z ctrl-up")
+[insert] cursor below: key("ctrl-shift-z ctrl-down")
+(copy|duplicate) [line] up: key("shift-alt-up")
+(copy|duplicate) [line] down: key("shift-alt-down")
+line up: key("alt-up")
+line down: key("alt-down")
+line above: key("shift-o")
+line below: key("alt-o")
+join lines: key("shift-j")
+undo: key("ctrl-z")
+redo: key("ctrl-y")
 
-(is in)|within: insert(' %in% ')
-pipe:
-	key(end)
-	insert(' %>%')
-	key(enter)
+# move
 
+jump back: key("ctrl-alt--")
+jump forward: key("ctrl-shift--")
 
-# convenience/structures
-
-install packages:
-	insert("install.packages('')")
-	key(left:2)
-library:
-	insert("library()")
-	key(left)
-call <user.text>:
-	insert(text)
-	insert('()')
-	key(left)
-for loop <user.letter> <user.text>:
-	insert('for( in ){')
-	key(left:6)
-	insert(letter)
-	key(right:4)
-	insert(text)
-	key(end enter enter backspace)
-	insert('}')
-	key(up end)
-function setup <user.text>:
-	insert(user.formatted_text(text, 'snake'))
-	insert(' <- function(){')
-	key(left:2)
-function define:
-	key(end enter enter backspace)
-	insert('}')
-	key(up end)
-
-# move, select, run, etc
-
-jump <user.number_text>:
-	key(escape)
-	insert(number_text)
-	key(shift-g)
-
-
-# common calls
-
-set working directory:  key("s e t w d ( ) left")
-# borrowed from some macos cheatsheet
-
+# run
 run that : key("ctrl-enter")
-#run document : key("ctrl-alt-r")
 run from top : key("ctrl-alt-b")
 run to end : key("ctrl-alt-e")
 run (function|funk) : key("ctrl-alt-f")
-#run section : key("ctrl-alt-t")
-#run previous chunks : key("ctrl-alt-p")
-#run chunk : key("ctrl-alt-c")
-#run next chunk : key("ctrl-alt-n")
 run all : key("ctrl-shift-s")
-#run knitter : key("ctrl-shift-k")
-#run profiler : key("ctrl-shift-alt-p")
-#jump back : key("ctrl-f9")
-#jump forward : key("ctrl-f10")
-#close all tabs : key("ctrl-shift-w")
-close tab:  key("ctrl-w")
+
+# R-specific
+wrap function: key("ctrl-k ctrl-shift-1")
+wrap loop: key("ctrl-k ctrl-shift-2")
+wrap (it else|ifelse|false): key("ctrl-k ctrl-shift-3")
+
+# untested/unorganized
 indent lines : key("ctrl-i")
 toggle comment : key("ctrl-shift-c")
 reformat comment : key("ctrl-shift-/")
-#reformat R code : key("ctrl-shift-a")
-line up : key("alt-up")
-line down : key("alt-down")
-duplicate line up : key("ctrl-alt-up")
-duplicate line [down] : key("ctrl-alt-down")
 select to paren : key("ctrl-shift-e")
 select to matching paren : key("ctrl-shift-alt-e")
 jump to matching : key("ctrl-p")
-#expand selection : key("shift-alt-ctrl-up")
-#reduce selection : key("shift-alt-ctrl-down")
 #add cursor up : key("ctrl-alt-up")
 #add cursor down : key("ctrl-alt-down")
-#move active cursor up : key("ctrl-alt-shift-up")
-#move active cursor down : key("ctrl-alt-shift-down")
-#delete line : key("ctrl-d")
-#delete word left : key("alt-backspace")
-#delete word right : key("alt-delete")
 assign that : key("alt--")
-pipe that : key("ctrl-shift-m")
-#insert knitter chunk : key("ctrl-alt-i")
 fold that : key("alt-l")
 unfold that : key("alt-shift-l")
 (collapse|fold) all : key("alt-o")
 unfold all : key("alt-shift-o")
-#find and replace : key("ctrl-f")
 find next : key("ctrl-g")
 find previous : key("ctrl-shift-g")
-#find with selection : key("ctrl-e")
-#find in files : key("ctrl-shift-f")
 run replace : key("ctrl-shift-j")
-#run spell check : key("f7")
 go to source : key("ctrl-1")
 go to console : key("ctrl-2")
 go to help : key("ctrl-3")
@@ -127,24 +79,8 @@ go to help : key("ctrl-3")
 go to (plots|plot) : key("ctrl-6")
 go to packages : key("ctrl-7")
 go to environment : key("ctrl-8")
-#go to git : key("ctrl-9")
-#go to build : key("ctrl-0")
-#go to terminal : key("alt-shift-t")
-#go to omni : key("ctrl-.")
-#go to line : key("ctrl-shift-alt-g")
-#go to section : key("ctrl-shift-alt-j")
-new tab: key("ctrl-shift-n")
-go to tab : key("ctrl-shift-.")
-previous tab:
-	key(ctrl-shift-tab)
-next tab:
-	key(ctrl-tab)
-go to first tab : key("ctrl-shift-f11")
-go to last tab : key("ctrl-shift-f12")
 zoom source : key("ctrl-shift-1")
 (zoom|show) all : key("ctrl-shift-0")
-help that : key("f1")
-define that : key("f2")
 previous plot : key("ctrl-alt-f11")
 next plot : key("ctrl-alt-f12")
 restart R session : key("ctrl-shift-f10")
@@ -159,5 +95,3 @@ debug step into (function|funk) : key("shift-f4")
 debug finish (function|funk) : key("shift-f6")
 debug continue : key("shift-f5")
 debug stop : key("shift-f8")
-#run git diff : key("ctrl-alt-d")
-#run git commit : key("ctrl-alt-m")

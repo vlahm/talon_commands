@@ -79,6 +79,8 @@ down:
 	key(down)
 up:
 	key(up)
+dell|dale: key(delete)
+
 
 # custom keyboard shortcuts
 
@@ -182,6 +184,9 @@ suspend:
 	key(super)
 	sleep(250ms)
 	insert("suspend")
+night color:
+	key(super-alt-shift-n)
+
 
 # system
 

@@ -49,6 +49,12 @@ office hacks edit:
 (are|or) studio hacks edit:
 	insert('vstudio')
 	key(enter)
+(are|or|r) hacks edit:
+	insert('vR')
+	key(enter)
+VSCode hacks edit:
+	insert('vvscode')
+	key(enter)
 (teabox|"te mux") hacks:
 	insert('ttmux')
 	key(enter)

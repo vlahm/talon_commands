@@ -1,3 +1,6 @@
+get rid of the toolbar on terminal
+a shortcut for search tool
+
 figure out why vim windows don't obey snap commands
 figure out why "super" doesn't launch the launcher
 figure out how to log out, lock, etc
@@ -9,3 +12,6 @@ make the old dragonfly cheat sheet fullyrelevant again
 
 make talon display words small and in the bottom right
 Figure out why saying the word full causes  te mux to detach from the session
+
+change all occurrences
+	ztrl+F6 (fucky)

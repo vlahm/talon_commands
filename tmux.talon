@@ -1,4 +1,4 @@
-title: /^tmux/
+title: /tmux/
 
 -
 mux split horizontal:
