@@ -1,1 +1,9 @@
 community/
+cursorless-talon/
+modified_full_mouse_grid/*
+!modified_full_mouse_grid/
+!modified_full_mouse_grid/full_mouse_settings.talon
+talon_hud/*
+!talon_hud/
+!talon_hud/preferences/**
+vim/

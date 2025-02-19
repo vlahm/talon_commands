@@ -52,7 +52,7 @@ find name [<user.text>]:
 	key(left)
 find (Durr|directory) [<user.text>]:
 	insert("find . -type d -name '")
-	insert(text or '")
+	insert(text or "")
 	insert("'")
 	key(left)
 
@@ -165,4 +165,7 @@ pseudo|sudo:
 	key(enter)
 
 # turbo misc
+
 control: insert('ctrl-')
+copy: key(ctrl-shift-c)
+paste: key(ctrl-shift-v)

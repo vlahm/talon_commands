@@ -2,6 +2,9 @@ app: Rstudio
 app: code
 and title: /\.R - /
 -
+settings():
+	key_wait = 5
+
 # operators
 
 assign: insert(' <- ')
@@ -69,3 +72,7 @@ jump <user.number_text>:
 # common calls
 
 set working directory:  key("s e t w d ( ) left")
+(read|breed) CSV: key("r e a d _ c s v ( ' ' ) left:2")
+#(read|breed) CSV:
+#	insert("read_csv('')")
+#	key(left:2)

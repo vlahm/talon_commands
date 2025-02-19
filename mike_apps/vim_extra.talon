@@ -29,16 +29,16 @@ write and (close|quit):
 
 # folding
 
-crimp:
+crimp|crap:
 	key(escape)
 	insert('zo')
-crimp close:
+(crimp|crap) close:
 	key(escape)
 	insert('zc')
-crimp open all:
+(crimp|crap) open all:
 	key(escape)
 	insert('zR')
-crimp close all:
+(crimp|crap) close all:
 	key(escape)
 	insert('zM')
 
@@ -92,11 +92,16 @@ go:
 	key(escape shift-g)
 go top:
 	key(escape g g)
+go <user.number_string>:
+	key(escape)
+	insert(number_string)
+	key(shift-g)
 retro:
 	key(``)
 fade:
 	key(shift-f)
 # miscellaneous
 
-jolt:
-	key(escape c a w)
+(join lines)|joint: key(escape shift-j)
+jolt: key(escape c a w)
+slap: key(escape a end enter)

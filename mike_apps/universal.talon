@@ -119,8 +119,12 @@ switch (window|windows) rev:
 	key(alt-shift-tab)
 switch same:
 	key(alt-`)
-switch same alt:
-	key(alt-~)
+switch same rev:
+	key(alt-shift-`)
+switch same (all|alt|far|global):
+	key(super-`)
+switch same (all|alt|far|global) rev:
+	key(super-shift-`)
 move window left:
 	key(super-shift-left)
 move window right:
