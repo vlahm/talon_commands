@@ -4,6 +4,7 @@ app:code
 Renzo|runzo: key("ctrl-shift-p")
 [show] [file] explorer: key("ctrl-shift-e")
 [show] [our] workspace: key("ctrl-k ctrl-shift-r")
+[show] extensions: key(ctrl-shift-x)
 show help: key("f1")
 
 new tab: key("ctrl-shift-n")

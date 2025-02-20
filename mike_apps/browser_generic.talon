@@ -1,4 +1,4 @@
-app.name: firefox
+app.name: /firefox/
 -
 
 address|(url [bar]):

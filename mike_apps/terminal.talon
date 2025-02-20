@@ -163,7 +163,21 @@ pseudo|sudo:
 (pseudo|sudo) (sue|two):
 	insert('sudo su')
 	key(enter)
+speech [<user.text>]:
+    insert("spd-say ''")
+	key(left)
+	insert(user.text or '')
 
+# audio-visual
+
+audio config <number_small>:
+	insert('aud')
+	insert(number_small)
+	key(enter)
+display config <number_small>:
+	insert('disp')
+	insert(number_small)
+	key(enter)
 # turbo misc
 
 control: insert('ctrl-')

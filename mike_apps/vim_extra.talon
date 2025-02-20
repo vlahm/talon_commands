@@ -103,5 +103,5 @@ fade:
 # miscellaneous
 
 (join lines)|joint: key(escape shift-j)
-jolt: key(escape c a w)
+jolt: key(escape right c a w)
 slap: key(escape a end enter)
