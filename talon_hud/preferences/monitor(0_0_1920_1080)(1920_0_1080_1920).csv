@@ -1,9 +1,9 @@
-status_bar_x,1102
-status_bar_y,1035
+status_bar_x,1334
+status_bar_y,1031
 status_bar_width,250
 status_bar_height,50
-status_bar_limit_x,1102
-status_bar_limit_y,1035
+status_bar_limit_x,1334
+status_bar_limit_y,1031
 status_bar_limit_width,250
 status_bar_limit_height,50
 status_bar_font_size,24

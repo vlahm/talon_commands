@@ -1,12 +1,23 @@
 -
+settings():
+	key_wait = 8
+
 # text insertions
 
+stopper: key('. space')
+commerce: key(', space')
+next (ard|erg|arg): key(', enter')
+onward: key('right space')
+eduardo: key('right enter')
 bubble:
 	insert('()')
 	key(left)
 box:
 	insert('[]')
 	key(left)
+dub box:
+	insert('[[]]')
+	key(left:2)
 mandoline|mandolin:
 	insert('{}')
 	key(left)
@@ -19,8 +30,14 @@ substring|substrate:
 superstring:
 	insert('""')
 	key(left)
+my email: insert('vlahm13@gmail.com')
+my first name: insert('Mike')
+my first name full: insert('Michael')
+my last name: insert('Vlah')
+my address: insert('125 E 200 N Apt 1')
+my phone: insert('412-735-3706')
 
-# scroll
+# scroll/movement
 
 #enable his|hiss scroll:
 #    user.mouse_enable_hiss_scroll = true
@@ -28,28 +45,28 @@ superstring:
 #    user.mouse_enable_hiss_scroll = false
 
 roll down:
-	user.mouse_scroll_down(0.1)
+	user.mouse_scroll_down(1)
 	sleep(50ms)
-	user.mouse_scroll_down(0.1)
+	user.mouse_scroll_down(1)
 	sleep(50ms)
-	user.mouse_scroll_down(0.1)
+	user.mouse_scroll_down(1)
 	sleep(50ms)
-	user.mouse_scroll_down(0.1)
+	user.mouse_scroll_down(1)
 	sleep(50ms)
-	user.mouse_scroll_down(0.1)
+	user.mouse_scroll_down(1)
 roll up:
-	user.mouse_scroll_up(0.6)
+	user.mouse_scroll_up(5)
+flip: key(pagedown)
+backlit|backflip: key(pageup)
 
 # copy paste select jump
 
-copy:
-	key(ctrl-c)
-paste:
-	key(ctrl-v)
-highlight all:
-	key(ctrl-a)
-(select|highlight) word:
-	key(ctrl-left ctrl-shift-right)
+term copy: key(ctrl-shift-c)
+term paste: key(ctrl-shift-v)
+copy: key(ctrl-c)
+paste: key(ctrl-v)
+highlight all: key(ctrl-a)
+(select|highlight) word: key(ctrl-left ctrl-shift-right)
 
 # keys
 
@@ -80,6 +97,7 @@ down:
 up:
 	key(up)
 dell|dale: key(delete)
+capslock: key(capslock)
 
 
 # custom keyboard shortcuts
@@ -91,6 +109,10 @@ key(ctrl-super-.):
 	tracking.control_toggle()
 	tracking.zoom_cancel()
 	app.notify("toggle tracking")
+key(super-3):
+	user.switcher_launch('/usr/bin/env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/firefox_firefox.desktop /snap/bin/firefox ')
+#key(super-7):
+#	mimic('launch slack')
 
 # mouse
 
@@ -182,7 +204,7 @@ remove grid:
 	user.grid_close()
 search [<user.text>]:
     key(ctrl-f)
-	sleep(200ms)
+	sleep(500ms)
 	insert(text or "")
 suspend:
 	key(super)
@@ -196,3 +218,9 @@ night color:
 
 lock session:
 	key(super-l)
+
+
+# mishears
+
+clone that fine: insert('')
+bang: insert('')

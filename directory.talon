@@ -52,6 +52,9 @@ office hacks edit:
 (are|or|r) hacks edit:
 	insert('vR')
 	key(enter)
+python hacks edit:
+	insert('vpython')
+	key(enter)
 VSCode hacks edit:
 	insert('vvscode')
 	key(enter)
@@ -96,4 +99,10 @@ keys file edit:
 	key(enter)
 (get|git) hacks edit:
 	insert('vgit')
+	key(enter)
+letters file edit:
+	insert('vletters')
+	key(enter)
+(vocabulary|homophones) file edit:
+	insert('vvocabulary')
 	key(enter)

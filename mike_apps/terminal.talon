@@ -13,6 +13,14 @@ and not title: /vim/i
 #activate the global tag "browser"
 #tag(): browser
 
+# operators
+
+pipe: insert(' | ')
+flag <user.letters>:
+	insert(' -')
+	insert(user.letters)
+	insert(' ')
+
 # shortcuts
 clear left: key(ctrl-u)
 clear right: key(ctrl-k)
@@ -20,7 +28,7 @@ clear:
 	key(ctrl-k)
 	key(ctrl-u)
 clear output: key(ctrl-l)
-interrupt: key(ctrl-c)
+cancel|interrupt: key(ctrl-c)
 kill: key(ctrl-d)
 mega kill: key(ctrl-x)
 
@@ -46,17 +54,17 @@ pie grip files [<user.text>]:
 
 # find
 find name [<user.text>]:
-	insert("find . -name '")
+	insert("find . -name '*")
 	insert(text or '')
-	insert("'")
-	key(left)
+	insert("*'")
+	key(left:2)
 find (Durr|directory) [<user.text>]:
 	insert("find . -type d -name '")
 	insert(text or "")
 	insert("'")
 	key(left)
 
-# files+
+# files, aliases
 bash RC:
 	insert('bashrc')
 	key(enter)
@@ -69,8 +77,37 @@ plants:
 talon hacks:
 	insert('talonhax')
 	key(enter)
+sequel hacks:
+	insert('sqlhax')
+	key(enter)
+(python hacks)|pythax:
+	insert('pythax')
+	key(enter)
 
 # programs
+
+disk usage [<user.letters>]:
+	insert('du -hcs ')
+	insert(user.letters or '')
+	key(tab)
+less [<user.letters>]:
+	insert('less ')
+	insert(user.letters or '')
+	key(tab)
+code [<user.letters>]:
+	insert('code ')
+	insert(user.letters or '')
+	key(tab enter)
+removed her [<user.word>]:
+	insert('rmdir ')
+	insert(word)
+copper [<user.word>]:
+	insert('cp ')
+	insert(word)
+mover [<user.word>]:
+	insert('mv ')
+	insert(word)
+ex clip: insert('xclip')
 text edit [<user.text>]:
 	insert('vim ')
 	insert(text or '')
@@ -91,9 +128,18 @@ blank text edit:
 	insert(letter)
 	key(enter)
 # navigation
-flash:
-	insert('ls')
+flash up:
+	insert('ls ..')
 	key(enter)
+flash <user.word>:
+	insert('ls ')
+	insert(word)
+	key(tab enter)
+flash [<user.symbol_key>] [<user.letters>]:
+	insert('ls ')
+	insert(user.symbol_key or '')
+	insert(user.letters or '')
+	key(tab enter)
 flash details:
 	insert('ll')
 	key(enter)
@@ -109,34 +155,50 @@ flash curse details:
 flash all:
 	insert('la')
 	key(enter)
-#("el less"|eless|LS) <user.text>:
-(lass|laugh) [<user.text>]:
-	insert('ls ')
-	insert(user.formatted_text(text or '', "snake"))
-CD home:
-	insert('cd ~')
+#(lass|laugh) [<user.text>]:
+#	insert('ls ')
+#	insert(user.formatted_text(text or '', "SNAKE_CASE"))
+(branch|CD) home:
+	insert('c ~')
 	key(enter)
-CD up:
-	insert('cd ..')
+(branch|CD) up:
+	insert('c ..')
 	key(enter)
-CD (back|previous):
-	insert('cd -')
+(branch|CD) (back|previous):
+	insert('c -')
 	key(enter)
-CD root:
-	insert('cd /')
+(branch|CD) root:
+	insert('c /')
 	key(enter)
+fork <user.text>:
+	insert('c ./')
+	insert(user.formatted_text(text, "SLASH_SEPARATED"))
+	key(tab enter)
 branch <user.text>:
 	insert('c ./')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))
+fork [<user.symbol_key>] [<user.letters>]:
+	insert('c ./')
+	insert(user.symbol_key or '')
+	insert(letters or '')
+	key(tab enter)
 branch:
 	insert('c ')
-CD <user.text>:
+(CD|seedy) <user.text>:
 	insert('cd .')
 	insert(user.formatted_text(text, "SLASH_SEPARATED"))
 print working directory:
 	insert('pwd')
 	key(enter)
+
 # locations
+
+downloads: insert(' ~/Downloads/')
+desktop: insert(' ~/Desktop/')
+dropbox: insert(' ~/Dropbox/')
+warp settings:
+	insert('c /home/mike/.talon/user/community/settings')
+	key(enter)
 warp talon:
 	insert('c ~/.talon/user')
 	key(enter)
@@ -167,6 +229,8 @@ speech [<user.text>]:
     insert("spd-say ''")
 	key(left)
 	insert(user.text or '')
+make (dir|direct|directory): insert('mkdir ')
+system control: insert('systemctl ')
 
 # audio-visual
 
@@ -178,8 +242,13 @@ display config <number_small>:
 	insert('disp')
 	insert(number_small)
 	key(enter)
+
+# mishears/translations
+
+grep: insert('grep -r ')
+
 # turbo misc
 
-control: insert('ctrl-')
 copy: key(ctrl-shift-c)
 paste: key(ctrl-shift-v)
+VS prep: key(v s p r e p enter)

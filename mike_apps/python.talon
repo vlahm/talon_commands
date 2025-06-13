@@ -1,26 +1,17 @@
-app: Rstudio
 app: code
-and title: /\.R - /
-app: code
-and title: /R Interactive/
+and title: /\.py - /
 -
 settings():
 	key_wait = 8
 
 # actions
 
-run (that|line|ten): key("ctrl-enter")
-run <number_small>: user.ctrl_enter_repeat(number_small)
-debug this:
-	key(ctrl-c ctrl-2)
-	insert('debugonce()')
-	key(left ctrl-shift-v enter ctrl-1)
+run (that|line): key("shift-enter")
 
 # operators
 
-assign: insert(' <- ')
-global assign: insert(' <<- ')
-equal: insert(' = ')
+assign: insert(' = ')
+equal: insert('=')
 
 equals: insert(' == ')
 greater than: insert(' > ')
@@ -30,16 +21,16 @@ less equal: insert(' <= ')
 not equal|equals: insert(' != ')
 
 not: insert('!')
-double not: insert('!!')
-triple not: insert('!!!')
-true: insert('TRUE')
-false: insert('FALSE')
+true: insert('True')
+false: insert('False')
 
 plus: insert(' + ')
 minus: insert(' - ')
 times|multiply: insert(' * ')
+power: insert(' ** ')
 divide|divided: insert(' / ')
-modular|modulo: insert(' %% ')
+floor divide: insert(' // ')
+modular|modulo: insert(' % ')
 
 bit or: insert(' | ')
 bit and: insert(' & ')
@@ -66,44 +57,37 @@ advect:
 	key(left)
 call <user.text>:
 	insert(text)
-	insert('()')
-	key(left)
+	insert('(')
+#	key(left)
 comment section:
 	insert(' ####')
 	key(enter:2)
-for loop <user.letter> <user.text>:
-	insert('for( in ){')
-	key(left:6)
-	insert(letter)
-	key(right:4)
-	insert(text)
-	key(end enter enter backspace)
-	insert('}')
-	key(up end)
-function setup [<user.letters>] [<user.text>]:
-	insert(user.letters or '')
-	insert(user.formatted_text(text or '', 'SNAKE_CASE'))
-	insert(' <- function(){')
-	key(left:2)
-function define:
-	key(end enter enter backspace)
-	insert('}')
-	key(up end)
+#for loop <user.letter> <user.text>:
+#	insert('for( in ){')
+#	key(left:6)
+#	insert(letter)
+#	key(right:4)
+#	insert(text)
+#	key(end enter enter backspace)
+#	insert('}')
+#	key(up end)
+#function setup <user.text>:
+#	insert(user.formatted_text(text, 'SNAKE_CASE'))
+#	insert(' <- function(){')
+#	key(left:2)
+#function define:
+#	key(end enter enter backspace)
+#	insert('}')
+#	key(up end)
 
 # common expressions
 
-dev off:
-	insert('dev.off()')
-	key(enter)
 set working directory:  key("s e t w d ( ) left")
-get working directory:
-	key("g e t w d ( )")
-	key(enter)
 (read|breed) CSV: key("r e a d _ c s v ( ' ' ) left:2")
 right CSV:
-	insert("write_csv()")
-	key(left)
-install packages:
+	insert("write_csv('')")
+	key(left:2)
+install (packages:
 	insert("install.packages('')")
 	key(left:2)
 library|libo:

@@ -6,4 +6,5 @@ modified_full_mouse_grid/.git
 talon_hud/*
 !talon_hud/preferences/
 talon_hud/preferences/.gitignore
+talon_hud/preferences/monitor*.csv
 vim/

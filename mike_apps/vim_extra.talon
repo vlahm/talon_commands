@@ -7,6 +7,11 @@ title: /vim/i
 
 line above: key(escape shift-o)
 line below: key(escape o)
+control: insert('ctrl-')
+Glynn sort <user.keys>:
+	key(shift-i)
+	insert(keys)
+	key(escape)
 
 # file operations
 
@@ -29,16 +34,16 @@ write and (close|quit):
 
 # folding
 
-crimp|crap:
+uncrimp section:
 	key(escape)
 	insert('zo')
-(crimp|crap) close:
+crimp section:
 	key(escape)
 	insert('zc')
-(crimp|crap) open all:
+uncrimp all:
 	key(escape)
 	insert('zR')
-(crimp|crap) close all:
+crimp all:
 	key(escape)
 	insert('zM')
 
@@ -64,17 +69,19 @@ compact insert:
 	key(end enter tab)
 	insert("insert('')")
 	key(left:2)
+pipe: insert('|')
 
-# selection
+# selection, line operations
 
 glint line:
 	key(escape shift-v)
 glint block:
-	key(escape control-v)
+	key(escape ctrl-v)
 clip line:
 	key(escape y y)
 snip line:
 	key(escape d d)
+reselect: key(escape ` [ v ` ])
 
 # registers
 
@@ -103,5 +110,6 @@ fade:
 # miscellaneous
 
 (join lines)|joint: key(escape shift-j)
-jolt: key(escape right c a w)
+jolt: key(escape c a w)
 slap: key(escape a end enter)
+no highlight: key(escape : n o h enter)

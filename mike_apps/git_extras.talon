@@ -5,6 +5,12 @@ and not title: /vim/i
 
 # git extras
 
+create gitignore:
+	insert('touch .gitignore')
+	key(enter)
+edit gitignore:
+	insert('vim .gitignore')
+	key(enter)
 (get|git) (slug|slog):
 	insert('git slog')
 	key(enter)
