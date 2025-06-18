@@ -93,11 +93,12 @@ disk usage [<user.letters>]:
 less [<user.letters>]:
 	insert('less ')
 	insert(user.letters or '')
-	key(tab)
-code [<user.letters>]:
-	insert('code ')
-	insert(user.letters or '')
 	key(tab enter)
+code [<user.symbol_key>] [<user.letters>]:
+	insert('code ')
+	insert(user.symbol_key or '')
+	insert(user.letters or '')
+	key(tab)
 removed her [<user.word>]:
 	insert('rmdir ')
 	insert(word)
@@ -108,9 +109,10 @@ mover [<user.word>]:
 	insert('mv ')
 	insert(word)
 ex clip: insert('xclip')
-text edit [<user.text>]:
+text edit [<user.letters>]:
 	insert('vim ')
-	insert(text or '')
+	insert(letters or '')
+	key(tab)
 blank text edit:
 	insert('vim')
 	key(enter)

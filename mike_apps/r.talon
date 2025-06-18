@@ -11,8 +11,14 @@ settings():
 
 run (that|line|ten): key("ctrl-enter")
 run <number_small>: user.ctrl_enter_repeat(number_small)
+debug listen:
+	key(ctrl-1 ctrl-`)
+	insert('library(vscDebugger)')
+	key(enter)
+	insert('.vsc.listen()')
+	key(enter)
 debug this:
-	key(ctrl-c ctrl-2)
+	key(ctrl-c ctrl-1 ctrl-`)
 	insert('debugonce()')
 	key(left ctrl-shift-v enter ctrl-1)
 

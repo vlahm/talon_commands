@@ -88,7 +88,7 @@ lockdown:
 	key(shift:down)
 lockup:
 	key(shift:up)
-links|lynx:
+blinks|lynx:
 	key(left)
 rex|wrecked:
 	key(right)
