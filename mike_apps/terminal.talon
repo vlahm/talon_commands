@@ -33,6 +33,11 @@ kill: key(ctrl-d)
 mega kill: key(ctrl-x)
 
 # grep sed awk tr
+
+grep [<user.text>]:
+	insert("grep -r ''")
+	key(left)
+	insert(text or '')
 hefty grip:
 	insert('ftgrep .')
 ((tell|tall|towel)|talon) grip [<user.text>]:
@@ -109,9 +114,10 @@ mover [<user.word>]:
 	insert('mv ')
 	insert(word)
 ex clip: insert('xclip')
-text edit [<user.letters>]:
+text edit [<user.letters>] [<user.word>]:
 	insert('vim ')
 	insert(letters or '')
+	insert(word or '')
 	key(tab)
 blank text edit:
 	insert('vim')
@@ -245,9 +251,6 @@ display config <number_small>:
 	insert(number_small)
 	key(enter)
 
-# mishears/translations
-
-grep: insert('grep -r ')
 
 # turbo misc
 

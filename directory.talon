@@ -3,7 +3,7 @@ app.name: /konsole/i
 and not title: /vim/i
 -
 
-directory aliases:
+[(directory|edit)] aliases [edit]:
 	insert('valias_bash')
 	key(enter)
 directory (se|see):
@@ -54,6 +54,9 @@ office hacks edit:
 	key(enter)
 python hacks edit:
 	insert('vpython')
+	key(enter)
+positron hacks edit:
+	insert('vpositron')
 	key(enter)
 VSCode hacks edit:
 	insert('vvscode')

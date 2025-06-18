@@ -58,3 +58,7 @@ token, token
 type, type
 unit, unit
 value, value
+
+
+# 2025-06-17 21:46:49 - New entries automatically added by cursorless
+arg list, argumentList
