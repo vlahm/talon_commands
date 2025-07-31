@@ -13,7 +13,7 @@ settings():
 
 # actions
 
-run (that|line|ten): key("ctrl-enter")
+runner|(run that)|(run ten): key("ctrl-enter")
 run <number_small>: user.ctrl_enter_repeat(number_small)
 #debug listen:
 #	key(ctrl-1 ctrl-`)
@@ -25,6 +25,18 @@ debug this:
 	key(ctrl-c ctrl-1 ctrl-k f)
 	insert('debugonce()')
 	key(left ctrl-v enter ctrl-1)
+(browser mode)|(error browse):
+	key(ctrl-k f)
+	insert('options(error=browser)')
+	key(enter ctrl-1)
+(recover mode)|(error recover):
+	key(ctrl-k f)
+	insert('options(error=recover)')
+	key(enter ctrl-1)
+(default mode)|(error default):
+	key(ctrl-k f)
+	insert('options(error=NULL)')
+	key(enter ctrl-1)
 
 # operators
 
@@ -42,8 +54,6 @@ not equal|equals: insert(' != ')
 not: insert('!')
 double not: insert('!!')
 triple not: insert('!!!')
-true: insert('TRUE')
-false: insert('FALSE')
 
 plus: insert(' + ')
 minus: insert(' - ')
@@ -51,6 +61,7 @@ times|multiply: insert(' * ')
 divide|divided: insert(' / ')
 modular|modulo: insert(' %% ')
 
+[vertical] bar: insert('|')
 bit or: insert(' | ')
 bit and: insert(' & ')
 short or: insert(' || ')
@@ -67,6 +78,7 @@ pipe:
 	#insert(' %>%')
 	#key(enter)
 	key(ctrl-shift-m)
+inline pipe: key(escape end space % > % space)
 
 
 # convenience/structures
@@ -102,6 +114,28 @@ function define:
 
 # common expressions
 
+bind rows:
+	insert('bind_rows()')
+	key(left)
+bind calls:
+	insert('bind_cols()')
+	key(left)
+as tibble:
+	insert('as_tibble()')
+	key(left)
+left join:
+	insert('left_join()')
+	key(left)
+full join:
+	insert('full_join()')
+	key(left)
+as posit:
+	insert('as.POSIXct()')
+	key(left)
+group by:
+	insert('group_by()')
+	key(left)
+na remove: insert('na.rm = TRUE')
 dev off:
 	insert('dev.off()')
 	key(enter)
@@ -109,6 +143,13 @@ set working directory:  key("s e t w d ( ) left")
 get working directory:
 	key("g e t w d ( )")
 	key(enter)
+get (env|environment):
+	insert('Sys.getenv("")')
+	key(left:2)
+set (env|environment):
+	insert('Sys.setenv("")')
+	key(left:2)
+lubricate: insert('lubridate')
 (read|breed) CSV: key("r e a d _ c s v ( ' ' ) left:2")
 right CSV:
 	insert("write_csv()")
@@ -119,13 +160,27 @@ install packages:
 library|libo:
 	insert("library()")
 	key(left)
-anna|ennay: insert('NA')
+na|anna|ennay: insert('NA')
+true: insert('TRUE')
+false: insert('FALSE')
 null: insert('NULL')
 not a number: insert('NaN')
 infinity: insert('Inf')
 ellipsis: insert('...')
 as date: insert('as.Date(')
 as posix: insert('as.POSIXct(')
+set diff:
+	insert('setdiff()')
+	key(left)
+repel|Gretel:
+	insert("grepl('')")
+	key(left left)
+column names:
+	insert('colnames()')
+	key(left)
+row names:
+	insert('rownames()')
+	key(left)
 
 # mask
 

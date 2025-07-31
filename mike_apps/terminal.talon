@@ -20,6 +20,10 @@ flag <user.letters>:
 	insert(' -')
 	insert(user.letters)
 	insert(' ')
+(super|big) flag <user.text>:
+	insert(' --')
+	insert(user.formatted_text(text, 'DASH_SEPARATED'))
+	insert(' ')
 
 # shortcuts
 clear left: key(ctrl-u)
@@ -70,6 +74,9 @@ find (Durr|directory) [<user.text>]:
 	key(left)
 
 # files, aliases
+notes:
+	insert('notes')
+	key(enter)
 bash RC:
 	insert('bashrc')
 	key(enter)
@@ -91,6 +98,23 @@ sequel hacks:
 
 # programs
 
+pseudo apt update:
+	insert('sudo apt update')
+	key(enter)
+pseudo apt upgrade:
+	insert('sudo apt upgrade')
+	key(enter)
+open recent [<number_small>]:
+	insert('or ')
+	insert(number_small or '')
+	key(enter)
+vim open recent [<number_small>]:
+	insert('vor ')
+	insert(number_small or '')
+	key(enter)
+my sequel:
+	insert('mysql -u root -p')
+	key(enter)
 disk usage [<user.letters>]:
 	insert('du -hcs ')
 	insert(user.letters or '')
@@ -136,6 +160,9 @@ blank text edit:
 	insert(letter)
 	key(enter)
 # navigation
+flash:
+	insert('ls')
+	key(enter)
 flash up:
 	insert('ls ..')
 	key(enter)
@@ -143,9 +170,9 @@ flash <user.word>:
 	insert('ls ')
 	insert(word)
 	key(tab enter)
-flash [<user.symbol_key>] [<user.letters>]:
+flash <user.symbol_key> [<user.letters>]:
 	insert('ls ')
-	insert(user.symbol_key or '')
+	insert(user.symbol_key)
 	insert(user.letters or '')
 	key(tab enter)
 flash details:
@@ -201,6 +228,8 @@ print working directory:
 
 # locations
 
+hacks: key(h a x enter)
+stuff: key(s t u f f enter)
 downloads: insert(' ~/Downloads/')
 desktop: insert(' ~/Desktop/')
 dropbox: insert(' ~/Dropbox/')
@@ -257,3 +286,21 @@ display config <number_small>:
 copy: key(ctrl-shift-c)
 paste: key(ctrl-shift-v)
 VS prep: key(v s p r e p enter)
+stream pulse server:
+	insert('spserv')
+	key(enter)
+Hubbard brooks server:
+	insert('hbefserv')
+	key(enter)
+macro shed's server:
+	insert('msserv')
+	key(enter)
+dukes server:
+	insert('dukeserv')
+	key(enter)
+you en eight server:
+	insert('unhserv')
+	key(enter)
+duke compute [cluster] server:
+	insert('dccserv')
+	key(enter)

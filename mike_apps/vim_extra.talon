@@ -107,6 +107,12 @@ retro:
 	key(``)
 fade:
 	key(shift-f)
+set mark <user.letter>:
+	key(escape m)
+	insert(letter)
+warp mark <user.letter>:
+	key(escape `)
+	insert(letter)
 # miscellaneous
 
 (join lines)|joint: key(escape shift-j)

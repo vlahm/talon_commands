@@ -58,9 +58,9 @@ python hacks edit:
 positron hacks edit:
 	insert('vpositron')
 	key(enter)
-VSCode hacks edit:
-	insert('vvscode')
-	key(enter)
+#VSCode hacks edit:
+#	insert('vvscode')
+#	key(enter)
 (teabox|"te mux") hacks:
 	insert('ttmux')
 	key(enter)
@@ -108,4 +108,7 @@ letters file edit:
 	key(enter)
 (vocabulary|homophones) file edit:
 	insert('vvocabulary')
+	key(enter)
+file (types|extensions) file edit:
+	insert('vfiletypes')
 	key(enter)

@@ -11,18 +11,20 @@ show help: key("f1")
 
 new tab: key("ctrl-n")
 #go to tab : key("ctrl-shift-.")
-previous tab: key(ctrl-shift-tab)
-next tab: key(ctrl-tab)
+previous tab: key(ctrl-pageup)
+next tab: key(ctrl-pagedown)
 close tab:  key("ctrl-w")
 #go to first tab : key("ctrl-shift-f11")
 #go to last tab : key("ctrl-shift-f12")
 
+edit: key(ctrl-1)
+send it: key(enter ctrl-1)
 [show] (console|consul): key(ctrl-k f)
 [show] environment: key(ctrl-k v)
 [show] debugger: key(ctrl-shift-y)
 [show] debug menu: key(ctrl-shift-d)
 [show] output: key(ctrl-k ctrl-h)
-[show] problems: key(ctrl-shift-m)
+[show] problems: key(ctrl-k ctrl-shift-p)
 
 # introspection
 #rename symbol: key("f2")
@@ -33,7 +35,7 @@ go to definition: key("f12")
 [find] [all] references: key("alt-shift-f12")
 
 # edit
-reformat: key("ctrl-shift-i")
+realign|reformat: key("ctrl-shift-i")
 [insert] cursor above: key("ctrl-shift-z ctrl-up")
 [insert] cursor below: key("ctrl-shift-z ctrl-down")
 #(copy|duplicate) [line] up: key("shift-alt-up")
@@ -50,6 +52,9 @@ redo: key("ctrl-y")
 
 (previous location|position)|(jump back): key("ctrl-alt--")
 (next position|location)|(jump forward): key("ctrl-shift--")
+new arg: key(end left , enter)
+abort command:
+	key(ctrl-k f escape ctrl-shift-home backspace escape ctrl-1)
 
 #jump <user.number_text>:
 #	key(escape)
@@ -65,7 +70,7 @@ set mark <user.letter>:
 	insert(letter)
 	key(enter)
 warp mark <user.letter>:
-	key(ctrl-alt-`)
+	key(ctrl-alt-n)
 	sleep(200ms)
 	insert(letter)
 	key(enter)
@@ -95,9 +100,11 @@ rerun last: key("ctrl-k f up enter ctrl-1")
 
 # R-specific
 
+source [this] file: key(ctrl-shift-enter)
+[start] new session: key(ctrl-shift-/)
 are terminal: key(ctrl-r ctrl-shift-r)
 reload window: key(ctrl-r ctrl-shift-t)
-restart [our] session: key("ctrl-shift-f10")
+restart [our] session: key("ctrl-shift-0")
 wrap function: key("ctrl-k ctrl-shift-1")
 wrap loop: key("ctrl-k ctrl-shift-2")
 wrap (it else|ifelse|false): key("ctrl-k ctrl-shift-3")

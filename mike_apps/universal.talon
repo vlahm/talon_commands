@@ -30,11 +30,15 @@ substring|substrate:
 superstring:
 	insert('""')
 	key(left)
+ticks: key(` ` left)
 my email: insert('vlahm13@gmail.com')
 my first name: insert('Mike')
 my first name full: insert('Michael')
 my last name: insert('Vlah')
-my address: insert('125 E 200 N Apt 1')
+my full name: insert('Michael Vlah')
+my full name middle init: insert('Michael J Vlah')
+my full name middle: insert('Michael John Vlah')
+my address: insert('860 N 500 E')
 my phone: insert('412-735-3706')
 
 # scroll/movement
@@ -92,9 +96,9 @@ blinks|lynx:
 	key(left)
 rex|wrecked:
 	key(right)
-down:
+down|downer:
 	key(down)
-up:
+up|upper:
 	key(up)
 dell|dale: key(delete)
 capslock: key(capslock)

@@ -1,6 +1,10 @@
 app.name: /firefox/
 -
 
+clicker:
+	key(escape)
+	insert('f')
+
 address|(url [bar]):
 	browser.focus_address()
 

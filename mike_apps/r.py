@@ -11,4 +11,4 @@ class Chili:
 
         for _ in range(n):
             actions.key('ctrl-enter')
-            time.sleep(0.1)
+            time.sleep(0.2)

@@ -17,7 +17,12 @@ close tab:  key("ctrl-w")
 #go to first tab : key("ctrl-shift-f11")
 #go to last tab : key("ctrl-shift-f12")
 
+edit: key(ctrl-1)
 [show] (console|consul): key(ctrl-`)
+console <user.text>: 
+	key(ctrl-`)
+	insert(user.text or '')
+	key(enter ctrl-1)
 [show] debugger: key(ctrl-shift-y)
 [show] debug menu: key(ctrl-shift-d)
 [show] output: key(ctrl-k ctrl-h)
