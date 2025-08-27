@@ -20,7 +20,7 @@ flag <user.letters>:
 	insert(' -')
 	insert(user.letters)
 	insert(' ')
-(super|big) flag <user.text>:
+(turbo|super|big) flag <user.text>:
 	insert(' --')
 	insert(user.formatted_text(text, 'DASH_SEPARATED'))
 	insert(' ')
@@ -98,6 +98,17 @@ sequel hacks:
 
 # programs
 
+chime <number_small> <user.letter>:
+	insert('chime ')
+	insert(number_small)
+	insert(letter)
+	key(enter)
+change mode: insert('chmod ')
+change owner: insert('chown ')
+change group: insert('chgrp ')
+itch top:
+	insert('htop')
+	key(enter)
 pseudo apt update:
 	insert('sudo apt update')
 	key(enter)
@@ -115,7 +126,7 @@ vim open recent [<number_small>]:
 my sequel:
 	insert('mysql -u root -p')
 	key(enter)
-disk usage [<user.letters>]:
+(file size)|(disk usage) [<user.letters>]:
 	insert('du -hcs ')
 	insert(user.letters or '')
 	key(tab)
@@ -138,6 +149,9 @@ mover [<user.word>]:
 	insert('mv ')
 	insert(word)
 ex clip: insert('xclip')
+clip contents:
+	insert('cat  | xclip')
+	key(left:8)
 text edit [<user.letters>] [<user.word>]:
 	insert('vim ')
 	insert(letters or '')
@@ -148,7 +162,7 @@ blank text edit:
 	key(enter)
 	sleep(200ms)
 	key(i)
-(teabox|mux) (list|lass|flash|alas):
+(teabox|mux) (list|lass|flash|alas) [sessions]:
 	insert('tmux ls')
 	key(enter)
 (teabox|mux) new session [<user.letter>]:
@@ -160,6 +174,10 @@ blank text edit:
 	insert(letter)
 	key(enter)
 # navigation
+flash [<user.letters>]:
+	insert('ls ')
+	insert(letters or '')
+	key(tab enter)
 flash:
 	insert('ls')
 	key(enter)
@@ -178,8 +196,9 @@ flash <user.symbol_key> [<user.letters>]:
 flash details:
 	insert('ll')
 	key(enter)
-flash recent:
-	insert('lh')
+flash recent [<number_small>]:
+	insert('lh ')
+	insert(number_small or '')
 	key(enter)
 flash curse:
 	insert('ls -R')
@@ -266,7 +285,9 @@ speech [<user.text>]:
     insert("spd-say ''")
 	key(left)
 	insert(user.text or '')
-make (dir|direct|directory): insert('mkdir ')
+make (dir|direct|directory) [<user.word>]:
+	insert('mkdir ')
+	insert(word or '')
 system control: insert('systemctl ')
 
 # audio-visual
@@ -304,3 +325,4 @@ you en eight server:
 duke compute [cluster] server:
 	insert('dccserv')
 	key(enter)
+last arg: insert('$_')

@@ -1,6 +1,9 @@
 app.name: /firefox/
 -
 
+clear (cash|cache):
+	key(ctrl-shift-delete)
+
 clicker:
 	key(escape)
 	insert('f')

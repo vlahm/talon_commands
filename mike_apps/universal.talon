@@ -56,10 +56,8 @@ roll down:
 	user.mouse_scroll_down(1)
 	sleep(50ms)
 	user.mouse_scroll_down(1)
-	sleep(50ms)
-	user.mouse_scroll_down(1)
 roll up:
-	user.mouse_scroll_up(5)
+	user.mouse_scroll_up(4)
 flip: key(pagedown)
 backlit|backflip: key(pageup)
 
@@ -226,5 +224,5 @@ lock session:
 
 # mishears
 
-clone that fine: insert('')
+#clone that fine: insert('')
 bang: insert('')

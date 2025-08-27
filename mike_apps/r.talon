@@ -114,6 +114,9 @@ function define:
 
 # common expressions
 
+list files:
+	insert('list.files("")')
+	key(left:2)
 bind rows:
 	insert('bind_rows()')
 	key(left)
